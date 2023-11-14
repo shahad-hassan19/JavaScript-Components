@@ -1,6 +1,9 @@
 const target = document.getElementsByClassName('accdn');
-for(let i = 0; i < target.length; i++){
-    target[i].addEventListener('click', function(){
+
+const arr = Array.from(target);
+
+for(let i=0; i<arr.length;i++){
+    arr[i].addEventListener('click', function(){
         this.classList.toggle('active');
     })
 }
