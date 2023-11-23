@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+</head>
+<body>
+    <h1>Tabs</h1>
+    <div class="tab-section">
+        <div class="btn-box">
+            <button id="btn1" onclick="openHTML()"><i class="fa-brands fa-html5"></i>HTML</button>
+            <button id="btn2" onclick="openCSS()"><i class="fa-brands fa-css3-alt"></i>CSS</button>
+            <button id="btn3" onclick="openJS()"><i class="fa-brands fa-codepen"></i>JavaScript</button>
+        </div>
+        <div id="content1" class="content-box">
+            <div>
+                <h3>Learn HTML</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste quam nisi obcaecati libero dolorum quaerat neque totam saepe eligendi nihil aliquid quisquam est ad ipsum, necessitatibus unde dolor, optio doloremque.</p>
+                <button class="btn">Watch Video</button>
+            </div>
+            <img src="./Assets/HTML.png" alt="HTML Logo" > 
+        </div>
+        <div id="content2" class="content-box">
+            <div>
+                <h3>Learn CSS</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, maxime? A dolore officia nobis quos ipsam dolor nostrum eius nulla tenetur, ut eum? Natus autem, iste necessitatibus soluta pariatur dolorem.</p>
+                <button class="btn">Watch Video</button>
+            </div>
+            <img src="./Assets/CSS.png" alt="CSS Logo" > 
+        </div>
+        <div id="content3" class="content-box">
+            <div>
+                <h3>Learn JavaScript</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates voluptatibus illum, at vitae id dolorem non ab, praesentium libero dolorum a. Accusantium eum dignissimos, maiores minima quis iste error blanditiis.</p>
+                <button class="btn">Watch Video</button>
+            </div>
+            <img src="./Assets/JS.png" alt="JS Logo" > 
+        </div>
+    </div>
+    <script>
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+        let content1 = document.getElementById("content1");
+        let content2 = document.getElementById("content2");
+        let content3 = document.getElementById("content3");
+
+        function openHTML(){
+            content1.style.transform = "translateX(0)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(100%)";
+            btn1.style.color = "#ff7846";
+            btn2.style.color = "#000000";
+            btn3.style.color = "#000000";
+        }
+        function openCSS(){
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(0)";
+            content3.style.transform = "translateX(100%)";
+            btn1.style.color = "#000000";
+            btn2.style.color = "#ff7846";
+            btn3.style.color = "#000000";
+        }
+        function openJS(){
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(0)";
+            btn1.style.color = "#000000";
+            btn2.style.color = "#000000";
+            btn3.style.color = "#ff7846";
+        }
+
+    </script>
+</body>
+</html>
